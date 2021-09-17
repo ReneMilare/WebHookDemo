@@ -17,7 +17,9 @@ global with sharing class WebHookDemo {
             System.debug(EncodingUtil.convertToHex(hmac));
 
             if (hashedval == hmacString) {
-                System.debug('Deu certo');
+                System.debug('Secret value Matched and source can be trusted!');
+
+
                 response.statusCode = 200;
                 response.responseBody = Blob.valueOf(JSON.serialize(new SFDCResponse('Success', 'Processed Successfully :)')));
             } else {
