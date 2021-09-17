@@ -19,10 +19,10 @@ global with sharing class WebHookDemo {
             if (hashedval == hmacString) {
                 System.debug('Deu certo');
                 response.statusCode = 200;
-                response.responseBody = Blob.valueOf(JSON.serialize(new SFDCResponse('Success', 'Processed Successfully')));
+                response.responseBody = Blob.valueOf(JSON.serialize(new SFDCResponse('Success', 'Processed Successfully :)')));
             } else {
                 response.statusCode = 401;
-                response.responseBody = Blob.valueOf(JSON.serialize(new SFDCResponse('Failure', 'Not a valid Sender')));
+                response.responseBody = Blob.valueOf(JSON.serialize(new SFDCResponse('Failure', 'Not a valid Sender :(')));
             }
 
         } catch (Exception e) {
