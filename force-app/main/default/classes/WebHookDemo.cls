@@ -5,7 +5,7 @@ global with sharing class WebHookDemo {
         try {
             RestRequest request = RestContext.request;
             RestResponse response = RestContext.response;
-
+            // webhook github
             response.statusCode = 200;
             response.responseBody = Blob.valueOf(JSON.serialize(new SFDCResponse('Success', 'Processed Successfully')));
         } catch (Exception e) {
